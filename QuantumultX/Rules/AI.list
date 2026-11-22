@@ -1,0 +1,7 @@
+# Amazon Bedrock
+HOST-WILDCARD,bedrock.*.amazonaws.com,AI
+HOST-WILDCARD,bedrock-runtime.*.amazonaws.com,AI
+
+# Devin
+HOST-SUFFIX,devin.ai,AI
+HOST-SUFFIX,cognition.ai,AI

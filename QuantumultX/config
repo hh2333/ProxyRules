@@ -1,0 +1,92 @@
+[general]
+excluded_routes = 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16
+
+network_check_url = http://connectivity.samsung.com.cn/generate_204
+server_check_url = http://cp.cloudflare.com/generate_204
+
+resource_parser_url = https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/resource-parser.js
+
+[dns]
+no-system
+doq-server = quic://223.5.5.5:853
+
+[policy]
+static = Main, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
+static = Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
+
+static = AI, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
+static = Apple, DIRECT, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN
+static = Bahamut, TW, DIRECT
+static = Bilibili, DIRECT, HK, TW, CN
+static = Google, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
+static = HK Bank, DIRECT, HK
+static = Microsoft, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
+static = Netflix, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
+static = Scholar, DIRECT, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN
+static = Spotify, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
+static = Telegram, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
+static = UK Bank, UK, DIRECT
+static = Domestic, DIRECT, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN
+static = Other, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
+
+static = HK, HK Fallback, HK Auto, server-tag-regex=(🇭🇰)|(香港)|(Hong Kong)|(HK)
+static = TW, TW Fallback, TW Auto, server-tag-regex=(🇹🇼)|(台湾)|(Taiwan)|(TW)
+static = JP, JP Fallback, JP Auto, server-tag-regex=(🇯🇵)|(日本)|(Japan)|(JP)
+static = SG, SG Fallback, SG Auto, server-tag-regex=(🇸🇬)|(新加坡)|(Singapore)|(SG)
+static = US, US Fallback, US Auto, server-tag-regex=(🇺🇸)|(美国)|(United States)|(US)
+static = KR, KR Fallback, KR Auto, server-tag-regex=(🇰🇷)|(韩国)|(South Korea)|(KR)
+static = UK, UK Fallback, UK Auto, server-tag-regex=(🇬🇧)|(英国)|(United Kingdom)|(UK)|(GB)
+static = CN, CN Fallback, CN Auto, server-tag-regex=(🇨🇳)|(中国)|(China)|(CN)
+
+available = HK Fallback, server-tag-regex=(🇭🇰)|(香港)|(Hong Kong)|(HK)
+available = TW Fallback, server-tag-regex=(🇹🇼)|(台湾)|(Taiwan)|(TW)
+available = JP Fallback, server-tag-regex=(🇯🇵)|(日本)|(Japan)|(JP)
+available = SG Fallback, server-tag-regex=(🇸🇬)|(新加坡)|(Singapore)|(SG)
+available = US Fallback, server-tag-regex=(🇺🇸)|(美国)|(United States)|(US)
+available = KR Fallback, server-tag-regex=(🇰🇷)|(韩国)|(South Korea)|(KR)
+available = UK Fallback, server-tag-regex=(🇬🇧)|(英国)|(United Kingdom)|(UK)|(GB)
+available = CN Fallback, server-tag-regex=(🇨🇳)|(中国)|(China)|(CN)
+
+url-latency-benchmark = HK Auto, check-interval=300, tolerance=50, server-tag-regex=(🇭🇰)|(香港)|(Hong Kong)|(HK)
+url-latency-benchmark = TW Auto, check-interval=300, tolerance=50, server-tag-regex=(🇹🇼)|(台湾)|(Taiwan)|(TW)
+url-latency-benchmark = JP Auto, check-interval=300, tolerance=50, server-tag-regex=(🇯🇵)|(日本)|(Japan)|(JP)
+url-latency-benchmark = SG Auto, check-interval=300, tolerance=50, server-tag-regex=(🇸🇬)|(新加坡)|(Singapore)|(SG)
+url-latency-benchmark = US Auto, check-interval=300, tolerance=50, server-tag-regex=(🇺🇸)|(美国)|(United States)|(US)
+url-latency-benchmark = KR Auto, check-interval=300, tolerance=50, server-tag-regex=(🇰🇷)|(韩国)|(South Korea)|(KR)
+url-latency-benchmark = UK Auto, check-interval=300, tolerance=50, server-tag-regex=(🇬🇧)|(英国)|(United Kingdom)|(UK)|(GB)
+url-latency-benchmark = CN Auto, check-interval=300, tolerance=50, server-tag-regex=(🇨🇳)|(中国)|(China)|(CN)
+
+[server_remote]
+PUT_YOUR_SUB_URL_HERE, tag=PUT_YOUR_SUB_NAME_HERE, update-interval=172800, opt-parser=false, inserted-resource=false, enabled=true
+
+[filter_remote]
+https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/Quantumult/Rules/AI.list, tag=AI, force-policy=AI, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/OpenAI/OpenAI.list, tag=AI, force-policy=AI, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Claude/Claude.list, tag=AI, force-policy=AI, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Apple/Apple.list, tag=Apple, force-policy=Apple, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Bahamut/Bahamut.list, tag=Bahamut, force-policy=Bahamut, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/BiliBili/BiliBili.list, tag=Bilibili, force-policy=Bilibili, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Google/Google.list, tag=Google, force-policy=Google, enabled=true
+https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/Quantumult/Rules/HKBank.list, tag=HKBank, force-policy=HK Bank, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Microsoft/Microsoft.list, tag=Microsoft, force-policy=Microsoft, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix, force-policy=Netflix, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Scholar/Scholar.list, tag=Scholar, force-policy=Scholar, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify, force-policy=Spotify, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram, force-policy=Telegram, enabled=true
+https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/Quantumult/Rules/UKBank.list, tag=UKBank, force-policy=UK Bank, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/China/China.list, tag=Domestic, force-policy=Domestic, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/ChinaIPs/ChinaIPs.list, tag=Domestic, force-policy=Domestic, enabled=true
+
+[rewrite_remote]
+
+[server_local]
+
+[filter_local]
+IP-CIDR, 223.5.5.5/32, DIRECT
+GEOIP, CN, DIRECT
+HOST-KEYWORD, ., Other
+FINAL, Other
+
+[rewrite_local]
+
+[mitm]

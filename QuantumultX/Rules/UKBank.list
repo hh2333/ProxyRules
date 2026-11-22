@@ -1,0 +1,35 @@
+# Aqua
+HOST-SUFFIX,aquacard.co.uk,UKBank
+
+# Bank of Scotland
+HOST-SUFFIX,bankofscotland.co.uk,UKBank
+
+# Barclays
+HOST-SUFFIX,barclays.co.uk,UKBank
+
+# Chase
+HOST-SUFFIX,chase.co.uk,UKBank
+
+# Halifax
+HOST-SUFFIX,halifax.co.uk,UKBank
+
+# HSBC
+HOST-SUFFIX,hsbc.co.uk,UKBank
+
+# Lloyds
+HOST-SUFFIX,lloydsbank.co.uk,UKBank
+HOST-SUFFIX,lloydsbank.com,UKBank
+
+# Monzo
+HOST-SUFFIX,monzo.com,UKBank
+HOST-SUFFIX,monzo-alt.net,UKBank
+
+# NatWest
+HOST-SUFFIX,natwest.com,UKBank
+
+# Santander
+HOST-SUFFIX,santander.co.uk,UKBank
+
+# Yonder
+HOST-SUFFIX,yonder.com,UKBank
+HOST-SUFFIX,yondercard.com,UKBank

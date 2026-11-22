@@ -1,0 +1,60 @@
+# Ant
+HOST-SUFFIX,antbank.hk,HKBank
+
+# BEA
+HOST-SUFFIX,hkbea.com,HKBank
+
+# BOC
+HOST-SUFFIX,bochk.com,HKBank
+
+# BOCOM
+HOST-SUFFIX,hk.bankcomm.com,HKBank
+
+# CCB
+HOST-SUFFIX,asia.ccb.com,HKBank
+
+# CMBWL
+HOST-SUFFIX,cmbwinglungbank.com,HKBank
+
+# Chong Hing
+HOST-SUFFIX,chbank.com,HKBank
+
+# CNCBI
+HOST-SUFFIX,cncbinternational.com,HKBank
+
+# Ele
+HOST-SUFFIX,elebank.com,HKBank
+
+# Fusion
+HOST-SUFFIX,fusionbank.com,HKBank
+
+# Hang Seng
+HOST-SUFFIX,hangseng.com,HKBank
+
+# HSBC
+HOST-SUFFIX,hsbc.com.hk,HKBank
+
+# ICBC
+HOST-SUFFIX,icbcasia.com,HKBank
+
+# Livi
+HOST-SUFFIX,livibank.com,HKBank
+
+# Mox
+HOST-SUFFIX,mox.com,HKBank
+
+# NCB
+HOST-SUFFIX,ncb.com.hk,HKBank
+
+# Ping An
+HOST-SUFFIX,pingandb.com,HKBank
+
+# WeLab
+HOST-SUFFIX,welab.bank,HKBank
+
+# ZA
+HOST-SUFFIX,za.group,HKBank
+HOST-SUFFIX,zafinsvc.com,HKBank
+HOST-SUFFIX,zainvest.group,HKBank
+HOST-SUFFIX,zajourney.com,HKBank
+HOST-SUFFIX,zaticdn.com,HKBank
