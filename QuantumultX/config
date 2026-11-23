@@ -76,6 +76,7 @@ https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX
 https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/QuantumultX/Rules/UKBank.list, tag=UKBank, force-policy=UK Bank, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/China/China.list, tag=Domestic, force-policy=Domestic, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/ChinaIPs/ChinaIPs.list, tag=Domestic, force-policy=Domestic, enabled=true
+https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/QuantumultX/Rules/Final.list, tag=Other, force-policy=Other, enabled=true
 
 [rewrite_remote]
 
