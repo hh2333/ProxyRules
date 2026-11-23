@@ -60,20 +60,20 @@ url-latency-benchmark = CN Auto, check-interval=300, tolerance=50, server-tag-re
 PUT_YOUR_SUB_URL_HERE, tag=PUT_YOUR_SUB_NAME_HERE, update-interval=172800, opt-parser=false, inserted-resource=false, enabled=true
 
 [filter_remote]
-https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/Quantumult/Rules/AI.list, tag=AI, force-policy=AI, enabled=true
+https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/QuantumultX/Rules/AI.list, tag=AI, force-policy=AI, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/OpenAI/OpenAI.list, tag=AI, force-policy=AI, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Claude/Claude.list, tag=AI, force-policy=AI, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Apple/Apple.list, tag=Apple, force-policy=Apple, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Bahamut/Bahamut.list, tag=Bahamut, force-policy=Bahamut, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/BiliBili/BiliBili.list, tag=Bilibili, force-policy=Bilibili, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Google/Google.list, tag=Google, force-policy=Google, enabled=true
-https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/Quantumult/Rules/HKBank.list, tag=HKBank, force-policy=HK Bank, enabled=true
+https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/QuantumultX/Rules/HKBank.list, tag=HKBank, force-policy=HK Bank, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Microsoft/Microsoft.list, tag=Microsoft, force-policy=Microsoft, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix, force-policy=Netflix, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Scholar/Scholar.list, tag=Scholar, force-policy=Scholar, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify, force-policy=Spotify, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram, force-policy=Telegram, enabled=true
-https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/Quantumult/Rules/UKBank.list, tag=UKBank, force-policy=UK Bank, enabled=true
+https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/QuantumultX/Rules/UKBank.list, tag=UKBank, force-policy=UK Bank, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/China/China.list, tag=Domestic, force-policy=Domestic, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/ChinaIPs/ChinaIPs.list, tag=Domestic, force-policy=Domestic, enabled=true
 
