@@ -26,6 +26,7 @@ static = Scholar, DIRECT, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN
 static = Spotify, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
 static = Telegram, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
 static = UK Bank, UK, DIRECT
+static = YouTube, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
 static = Domestic, DIRECT, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN
 static = Other, Main, Backup, HK, TW, JP, SG, US, KR, UK, CN, DIRECT
 
@@ -74,6 +75,7 @@ https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify, force-policy=Spotify, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram, force-policy=Telegram, enabled=true
 https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/QuantumultX/Rules/UKBank.list, tag=UKBank, force-policy=UK Bank, enabled=true
+https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/YouTube/YouTube.list, tag=YouTube, force-policy=YouTube, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/China/China.list, tag=Domestic, force-policy=Domestic, enabled=true
 https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX/ChinaIPs/ChinaIPs.list, tag=Domestic, force-policy=Domestic, enabled=true
 https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/QuantumultX/Rules/Final.list, tag=Other, force-policy=Other, enabled=true
