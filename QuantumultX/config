@@ -84,7 +84,6 @@ https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/QuantumultX
 [filter_local]
 IP-CIDR, 223.5.5.5/32, DIRECT
 GEOIP, CN, DIRECT
-HOST-KEYWORD, ., Other
 FINAL, Other
 
 [rewrite_local]
