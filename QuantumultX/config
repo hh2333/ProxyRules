@@ -36,7 +36,7 @@ static = JP, JP Fallback, JP Auto, server-tag-regex=(🇯🇵)|(日本)|(Japan)|
 static = SG, SG Fallback, SG Auto, server-tag-regex=(🇸🇬)|(新加坡)|(Singapore)|(SG)
 static = US, US Fallback, US Auto, server-tag-regex=(🇺🇸)|(美国)|(United States)|(US)
 static = KR, KR Fallback, KR Auto, server-tag-regex=(🇰🇷)|(韩国)|(South Korea)|(KR)
-static = UK, UK Fallback, UK Auto, server-tag-regex=(🇬🇧)|(英国)|(United Kingdom)|(UK)|(GB)
+static = UK, UK Fallback, UK Auto, server-tag-regex=(🇬🇧)|(英国)|(United Kingdom)|(UK)
 static = CN, CN Fallback, CN Auto, server-tag-regex=(🇨🇳)|(中国)|(China)|(CN)
 
 available = HK Fallback, server-tag-regex=(🇭🇰)|(香港)|(Hong Kong)|(HK)
@@ -45,7 +45,7 @@ available = JP Fallback, server-tag-regex=(🇯🇵)|(日本)|(Japan)|(JP)
 available = SG Fallback, server-tag-regex=(🇸🇬)|(新加坡)|(Singapore)|(SG)
 available = US Fallback, server-tag-regex=(🇺🇸)|(美国)|(United States)|(US)
 available = KR Fallback, server-tag-regex=(🇰🇷)|(韩国)|(South Korea)|(KR)
-available = UK Fallback, server-tag-regex=(🇬🇧)|(英国)|(United Kingdom)|(UK)|(GB)
+available = UK Fallback, server-tag-regex=(🇬🇧)|(英国)|(United Kingdom)|(UK)
 available = CN Fallback, server-tag-regex=(🇨🇳)|(中国)|(China)|(CN)
 
 url-latency-benchmark = HK Auto, check-interval=300, tolerance=50, server-tag-regex=(🇭🇰)|(香港)|(Hong Kong)|(HK)
@@ -54,7 +54,7 @@ url-latency-benchmark = JP Auto, check-interval=300, tolerance=50, server-tag-re
 url-latency-benchmark = SG Auto, check-interval=300, tolerance=50, server-tag-regex=(🇸🇬)|(新加坡)|(Singapore)|(SG)
 url-latency-benchmark = US Auto, check-interval=300, tolerance=50, server-tag-regex=(🇺🇸)|(美国)|(United States)|(US)
 url-latency-benchmark = KR Auto, check-interval=300, tolerance=50, server-tag-regex=(🇰🇷)|(韩国)|(South Korea)|(KR)
-url-latency-benchmark = UK Auto, check-interval=300, tolerance=50, server-tag-regex=(🇬🇧)|(英国)|(United Kingdom)|(UK)|(GB)
+url-latency-benchmark = UK Auto, check-interval=300, tolerance=50, server-tag-regex=(🇬🇧)|(英国)|(United Kingdom)|(UK)
 url-latency-benchmark = CN Auto, check-interval=300, tolerance=50, server-tag-regex=(🇨🇳)|(中国)|(China)|(CN)
 
 [server_remote]
