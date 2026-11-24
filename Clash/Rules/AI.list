@@ -1,0 +1,7 @@
+# Amazon Bedrock
+DOMAIN-REGEX,bedrock\.[a-zA-Z0-9-]+\.amazonaws\.com
+DOMAIN-REGEX,bedrock-runtime\.[a-zA-Z0-9-]+\.amazonaws\.com
+
+# Devin
+DOMAIN-SUFFIX,devin.ai
+DOMAIN-SUFFIX,cognition.ai

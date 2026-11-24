@@ -1,0 +1,627 @@
+external-controller: 127.0.0.1:9093
+find-process-mode: strict
+ipv6: true
+tcp-concurrent: true
+unified-delay: true
+
+allow-lan: true
+bind-address: "*"
+
+profile:
+  store-fake-ip: true
+  store-selected: true
+
+geo-auto-update: true
+geo-update-interval: 24
+
+geox-url:
+  asn: "https://cdn.jsdelivr.net/gh/P3TERX/GeoLite.mmdb@download/GeoLite2-ASN.mmdb"
+  mmdb: "https://cdn.jsdelivr.net/gh/P3TERX/GeoLite.mmdb@download/GeoLite2-Country.mmdb"
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
+
+proxy-providers:
+  sub:
+    type: http
+    interval: 86400
+    url: PUT_YOUR_SUB_URL_HERE
+    health-check:
+      enable: true
+      interval: 60
+      url: http://cp.cloudflare.com/generate_204
+
+tun:
+  enable: true
+  auto-route: true
+  auto-detect-interface: true
+  endpoint-independent-nat: true
+  stack: mixed
+  strict-route: true
+
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  ipv6: true
+  respect-rules: true
+
+  fake-ip-range: 28.0.0.1/16
+  fake-ip-range6: 3000:cafe::/64
+
+  default-nameserver:
+    - 1.1.1.1
+    - 119.29.29.29
+
+  nameserver:
+    - https://dns.google/dns-query
+    - https://dns.cloudflare.com/dns-query
+
+  direct-nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.cloudflare.com/dns-query
+
+  proxy-server-nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.cloudflare.com/dns-query
+
+  fake-ip-filter:
+    - "*"
+    - geosite:private
+
+  nameserver-policy:
+    geosite:private: system
+
+proxy-groups:
+  - name: Main
+    type: select
+    proxies:
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: Backup
+    type: select
+    proxies:
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: AI
+    type: select
+    proxies:
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+
+  - name: Bahamut
+    type: select
+    proxies:
+      - TW
+      - DIRECT
+
+  - name: Bilibili
+    type: select
+    proxies:
+      - DIRECT
+      - HK
+      - TW
+      - CN
+
+  - name: Google
+    type: select
+    proxies:
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: HK Bank
+    type: select
+    proxies:
+      - DIRECT
+      - HK
+
+  - name: Microsoft
+    type: select
+    proxies:
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: Netflix
+    type: select
+    proxies:
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: Scholar
+    type: select
+    proxies:
+      - DIRECT
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+
+  - name: Spotify
+    type: select
+    proxies:
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: Telegram
+    type: select
+    proxies:
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: UK Bank
+    type: select
+    proxies:
+      - UK
+      - DIRECT
+
+  - name: YouTube
+    type: select
+    proxies:
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: Domestic
+    type: select
+    proxies:
+      - DIRECT
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+
+  - name: Other
+    type: select
+    proxies:
+      - Main
+      - Backup
+      - HK
+      - TW
+      - JP
+      - SG
+      - US
+      - KR
+      - UK
+      - CN
+      - DIRECT
+
+  - name: HK
+    type: select
+    include-all: true
+    proxies:
+      - HK Fallback
+      - HK Auto
+    filter: "(?i)(🇭🇰|香港|Hong Kong|HK)"
+
+  - name: TW
+    type: select
+    include-all: true
+    proxies:
+      - TW Fallback
+      - TW Auto
+    filter: "(?i)(🇹🇼|台湾|Taiwan|TW)"
+
+  - name: JP
+    type: select
+    include-all: true
+    proxies:
+      - JP Fallback
+      - JP Auto
+    filter: "(?i)(🇯🇵|日本|Japan|JP)"
+
+  - name: SG
+    type: select
+    include-all: true
+    proxies:
+      - SG Fallback
+      - SG Auto
+    filter: "(?i)(🇸🇬|新加坡|Singapore|SG)"
+
+  - name: US
+    type: select
+    include-all: true
+    proxies:
+      - US Fallback
+      - US Auto
+    filter: "(?i)(🇺🇸|美国|United States|US)"
+
+  - name: KR
+    type: select
+    include-all: true
+    proxies:
+      - KR Fallback
+      - KR Auto
+    filter: "(?i)(🇰🇷|韩国|South Korea|KR)"
+
+  - name: UK
+    type: select
+    include-all: true
+    proxies:
+      - UK Fallback
+      - UK Auto
+    filter: "(?i)(🇬🇧|英国|United Kingdom|UK|GB)"
+
+  - name: CN
+    type: select
+    include-all: true
+    proxies:
+      - CN Fallback
+      - CN Auto
+    filter: "(?i)(🇨🇳|中国|China|CN)"
+
+  - name: HK Fallback
+    type: fallback
+    interval: 300
+    hidden: true
+    include-all: true
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇭🇰|香港|Hong Kong|HK)"
+
+  - name: TW Fallback
+    type: fallback
+    interval: 300
+    hidden: true
+    include-all: true
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇹🇼|台湾|Taiwan|TW)"
+
+  - name: JP Fallback
+    type: fallback
+    interval: 300
+    hidden: true
+    include-all: true
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇯🇵|日本|Japan|JP)"
+
+  - name: SG Fallback
+    type: fallback
+    interval: 300
+    hidden: true
+    include-all: true
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇸🇬|新加坡|Singapore|SG)"
+
+  - name: US Fallback
+    type: fallback
+    interval: 300
+    hidden: true
+    include-all: true
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇺🇸|美国|United States|US)"
+
+  - name: KR Fallback
+    type: fallback
+    interval: 300
+    hidden: true
+    include-all: true
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇰🇷|韩国|South Korea|KR)"
+
+  - name: UK Fallback
+    type: fallback
+    interval: 300
+    hidden: true
+    include-all: true
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇬🇧|英国|United Kingdom|UK|GB)"
+
+  - name: CN Fallback
+    type: fallback
+    interval: 300
+    hidden: true
+    include-all: true
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇨🇳|中国|China|CN)"
+
+  - name: HK Auto
+    type: url-test
+    interval: 300
+    hidden: true
+    include-all: true
+    tolerance: 50
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇭🇰|香港|Hong Kong|HK)"
+
+  - name: TW Auto
+    type: url-test
+    interval: 300
+    hidden: true
+    include-all: true
+    tolerance: 50
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇹🇼|台湾|Taiwan|TW)"
+
+  - name: JP Auto
+    type: url-test
+    interval: 300
+    hidden: true
+    include-all: true
+    tolerance: 50
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇯🇵|日本|Japan|JP)"
+
+  - name: SG Auto
+    type: url-test
+    interval: 300
+    hidden: true
+    include-all: true
+    tolerance: 50
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇸🇬|新加坡|Singapore|SG)"
+
+  - name: US Auto
+    type: url-test
+    interval: 300
+    hidden: true
+    include-all: true
+    tolerance: 50
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇺🇸|美国|United States|US)"
+
+  - name: KR Auto
+    type: url-test
+    interval: 300
+    hidden: true
+    include-all: true
+    tolerance: 50
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇰🇷|韩国|South Korea|KR)"
+
+  - name: UK Auto
+    type: url-test
+    interval: 300
+    hidden: true
+    include-all: true
+    tolerance: 50
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇬🇧|英国|United Kingdom|UK|GB)"
+
+  - name: CN Auto
+    type: url-test
+    interval: 300
+    hidden: true
+    include-all: true
+    tolerance: 50
+    url: http://cp.cloudflare.com/generate_204
+    filter: "(?i)(🇨🇳|中国|China|CN)"
+
+rule-providers:
+  Lan:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.list
+  AI:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/Clash/Rules/AI.list
+  OpenAI:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.list
+  Claude:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.list
+  Apple:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.list
+  Bahamut:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.list
+  Bilibili:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.list
+  Google:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.list
+  HKBank:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/Clash/Rules/HKBank.list
+  Microsoft:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.list
+  Netflix:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.list
+  Scholar:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Scholar/Scholar.list
+  Spotify:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.list
+  Telegram:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.list
+  UKBank:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/hh2333/ProxyRules@main/Clash/Rules/UKBank.list
+  YouTube:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.list
+  China:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.list
+  ChinaIPs:
+    type: http
+    behavior: classical
+    interval: 86400
+    format: text
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs.list
+
+rules:
+  - IP-CIDR, 1.1.1.1/32, DIRECT, no-resolve
+  - IP-CIDR, 119.29.29.29/32, DIRECT, no-resolve
+  - RULE-SET, Lan, DIRECT, no-resolve
+  - RULE-SET, AI, AI, no-resolve
+  - RULE-SET, OpenAI, AI, no-resolve
+  - RULE-SET, Claude, AI, no-resolve
+  - RULE-SET, Apple, Apple, no-resolve
+  - RULE-SET, Bahamut, Bahamut, no-resolve
+  - RULE-SET, Bilibili, Bilibili, no-resolve
+  - RULE-SET, Google, Google, no-resolve
+  - RULE-SET, HKBank, HK Bank, no-resolve
+  - RULE-SET, Microsoft, Microsoft, no-resolve
+  - RULE-SET, Netflix, Netflix, no-resolve
+  - RULE-SET, Scholar, Scholar, no-resolve
+  - RULE-SET, Spotify, Spotify, no-resolve
+  - RULE-SET, Telegram, Telegram, no-resolve
+  - RULE-SET, UKBank, UK Bank, no-resolve
+  - RULE-SET, YouTube, YouTube, no-resolve
+  - RULE-SET, China, Domestic, no-resolve
+  - RULE-SET, ChinaIPs, Domestic, no-resolve
+  - GEOIP, CN, Domestic
+  - MATCH, Other
